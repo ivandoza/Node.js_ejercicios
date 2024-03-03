@@ -41,7 +41,8 @@ const create = (req: Request, res: Response) => {
   if (error) {
     return res.status(400).json({ error: error.details[0].message });
   }
-  planets.push(newPlanet);
+  //planets.push(newPlanet);
+  planets = [...planets, newPlanet];
   res.status(201).json({ msg: 'Planet created successfully' });
 };
 
