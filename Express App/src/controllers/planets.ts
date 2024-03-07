@@ -31,7 +31,7 @@ const getAll = (req: Request, res: Response) => {
 const getOneById = (req: Request, res: Response) => {
   const { id } = req.params;
   const planet = planets.find(p => p.id === Number(id));
-    res.status(200).json(planet);
+    res.status(200).json(planet); 
 };
 
 const create = (req: Request, res: Response) => {
